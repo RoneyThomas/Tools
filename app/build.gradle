@@ -4,7 +4,7 @@ android {
     compileSdkVersion 24
     buildToolsVersion "24.0.1"
     defaultConfig {
-        applicationId "ca.httpstmarysorthodoxchurch.events"
+        applicationId "ca.httpstmarysorthodoxchurch.tools"
         minSdkVersion 19
         targetSdkVersion 24
         versionCode 1
@@ -17,6 +17,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    dataBinding.enabled = true
 }
 
 dependencies {
@@ -25,6 +26,10 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:24.1.1'
+    compile 'com.android.support:recyclerview-v7:24.1.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha4'
+    compile 'com.firebaseui:firebase-ui-database:0.4.4'
     testCompile 'junit:junit:4.12'
 }
+
+apply plugin: 'com.google.gms.google-services'

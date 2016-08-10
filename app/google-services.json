@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "902809427512",
+    "firebase_url": "https://church-tools.firebaseio.com",
+    "project_id": "church-tools",
+    "storage_bucket": "church-tools.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:902809427512:android:0c53a7d0c482ebfb",
+        "android_client_info": {
+          "package_name": "ca.httpstmarysorthodoxchurch.tools"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "902809427512-o8vq0kvmebpdpemboj4eai1jm098qtgt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ca.httpstmarysorthodoxchurch.tools",
+            "certificate_hash": "4BA783687F91F90113E092C4F08B4707AB494650"
+          }
+        },
+        {
+          "client_id": "902809427512-aja2ptp9rjpilocsguvpkjic4eq0347v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQ8OD7madl_-0Ecq-jtrmBKL3aOAvWl3c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "902809427512-aja2ptp9rjpilocsguvpkjic4eq0347v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

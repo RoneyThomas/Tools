@@ -1,4 +1,4 @@
-package ca.httpstmarysorthodoxchurch.events;
+package ca.httpstmarysorthodoxchurch.tools;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
