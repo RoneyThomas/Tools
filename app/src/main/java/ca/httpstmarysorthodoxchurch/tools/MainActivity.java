@@ -5,6 +5,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
+import com.google.firebase.database.*;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -13,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager manager = getSupportFragmentManager();
         Fragment fragment = manager.findFragmentById(R.id.contianer_main);
         if (fragment == null) {
-            fragment = AddSchedule.newInstance();
+            fragment = LectionaryFragment.newInstance();
             manager.beginTransaction().add(R.id.contianer_main, fragment).commit();
         }
         setContentView(R.layout.activity_main);
