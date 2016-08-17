@@ -19,6 +19,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.Map;
 
 import ca.httpstmarysorthodoxchurch.tools.databinding.LectionaryFragmentBinding;
@@ -52,7 +54,7 @@ public class LectionaryFragment extends Fragment {
         mDatabase = Utils.getmDatabase();
         myRef = mDatabase.getReference("lectionary");
         myRef.keepSynced(true);
-        myRef.addListenerForSingleValueEvent(new ValueEventListener() {
+        myRef.orderByChild("date").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot child : dataSnapshot.getChildren()) {
@@ -75,7 +77,16 @@ public class LectionaryFragment extends Fragment {
         ArrayAdapter<Lectionary> mSpinnerArrayAdapter = new ArrayAdapter<Lectionary>(getActivity(), R.layout.support_simple_spinner_dropdown_item, mLectionarys);
         mSpinnerArrayAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         binding.lectionarySpinner.setAdapter(mSpinnerArrayAdapter);
-        binding.lectionarySpinner.setSelection(0);
+        GregorianCalendar currentDate = new GregorianCalendar();
+        currentDate.set(Calendar.HOUR_OF_DAY, 0);
+        currentDate.set(Calendar.MINUTE, 0);
+        currentDate.set(Calendar.SECOND, 0);
+        currentDate.set(Calendar.MILLISECOND, 0);
+        int x = 0;
+        for (long date = currentDate.getTimeInMillis(); date >= mLectionarys.get(x).getDate(); x++) {
+            Log.d("dsfsdf", "x is " + x+"    "+mLectionarys.get(x));
+        }
+        binding.lectionarySpinner.setSelection(--x);
         binding.lectionarySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -112,7 +123,11 @@ public class LectionaryFragment extends Fragment {
 //        mReading.add(new Reading("Evening", verse));
 //        Map<String, ArrayList<String>> value = new HashMap<>();
 //        value.put("Evening", verse);
-//        Lectionary mLectionary = new Lectionary("August-21: First Sunday after the Festival of the Assumption", new GregorianCalendar(2016, 7, 21).getTimeInMillis(), TimeZone.getDefault().getDisplayName(), value);
+//        Lectionary mLectionary = new Lectionary("August-9999: Second Sunday after the Festival of Transfiguration", new GregorianCalendar(2016, 4, 14).getTimeInMillis(), value);
+//        Lectionary mLectionary1 = new Lectionary("August-9999: The Festival of the Assumption of St. Mary (Marth Mariam Samajam Day)", new GregorianCalendar(2016, 10, 15).getTimeInMillis(), value);
+//        Lectionary mLectionary2 = new Lectionary("August-9999: First Sunday after the Festival of the Assumption", new GregorianCalendar(2016, 3, 28).getTimeInMillis(), value);
 //        myRef.push().setValue(mLectionary);
+//        myRef.push().setValue(mLectionary1);
+//        myRef.push().setValue(mLectionary2);
 //    }
 }

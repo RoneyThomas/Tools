@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager manager = getSupportFragmentManager();
         Fragment fragment = manager.findFragmentById(R.id.contianer_main);
         if (fragment == null) {
-            fragment = LectionaryFragment.newInstance();
+            fragment = ToolsPagerFragment.newInstance();
             manager.beginTransaction().add(R.id.contianer_main, fragment).commit();
         }
         setContentView(R.layout.activity_main);

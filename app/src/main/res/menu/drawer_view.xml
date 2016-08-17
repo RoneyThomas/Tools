@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_sign_in"
+            android:icon="@android:drawable/ic_btn_speak_now"
+            android:title="@string/nav_sign_in" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@android:drawable/sym_action_email"
+            android:title="@string/nav_sign_in"/>
+    </group>
+</menu>

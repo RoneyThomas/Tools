@@ -13,17 +13,15 @@ public class Lectionary {
 
     String title;
     long date;
-    String timeZone;
     Map<String, ArrayList<String>> reading;
 
     Lectionary() {
 
     }
 
-    Lectionary(String title, long date, String timeZone, Map<String, ArrayList<String>> reading) {
+    Lectionary(String title, long date, Map<String, ArrayList<String>> reading) {
         this.title = title;
         this.date = date;
-        this.timeZone = timeZone;
         this.reading = reading;
     }
 

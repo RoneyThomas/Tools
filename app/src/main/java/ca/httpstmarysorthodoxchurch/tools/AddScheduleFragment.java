@@ -15,12 +15,12 @@ import ca.httpstmarysorthodoxchurch.tools.databinding.AddScheduleFragmentBinding
  * Created by roneythomas on 2016-08-02.
  */
 
-public class AddSchedule extends Fragment {
-    public static AddSchedule newInstance() {
+public class AddScheduleFragment extends Fragment {
+    public static AddScheduleFragment newInstance() {
 
         Bundle args = new Bundle();
 
-        AddSchedule fragment = new AddSchedule();
+        AddScheduleFragment fragment = new AddScheduleFragment();
         fragment.setArguments(args);
         return fragment;
     }

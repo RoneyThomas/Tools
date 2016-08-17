@@ -2,4 +2,7 @@
     <string name="app_name">Church Tools</string>
     <string name="title">April 24</string>
     <string name="body">8:30 am: Prabhatha Namaskaram</string>
+    <string name="nav_sign_in">Sign In</string>
+    <string name="drawer_close">Close Nav Drawer</string>
+    <string name="drawer_open">Open Nav drawer</string>
 </resources>
