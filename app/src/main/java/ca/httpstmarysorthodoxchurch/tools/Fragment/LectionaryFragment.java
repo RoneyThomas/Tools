@@ -1,4 +1,4 @@
-package ca.httpstmarysorthodoxchurch.tools;
+package ca.httpstmarysorthodoxchurch.tools.Fragment;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -23,7 +23,10 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Map;
 
+import ca.httpstmarysorthodoxchurch.tools.R;
+import ca.httpstmarysorthodoxchurch.tools.Utils;
 import ca.httpstmarysorthodoxchurch.tools.databinding.LectionaryFragmentBinding;
+import ca.httpstmarysorthodoxchurch.tools.models.Lectionary;
 
 
 /**
@@ -84,9 +87,9 @@ public class LectionaryFragment extends Fragment {
         currentDate.set(Calendar.MILLISECOND, 0);
         int x = 0;
         for (long date = currentDate.getTimeInMillis(); date >= mLectionarys.get(x).getDate(); x++) {
-            Log.d("dsfsdf", "x is " + x+"    "+mLectionarys.get(x));
+            Log.d("dsfsdf", "x is " + x + "    " + mLectionarys.get(x));
         }
-        binding.lectionarySpinner.setSelection(--x);
+        binding.lectionarySpinner.setSelection(x);
         binding.lectionarySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {

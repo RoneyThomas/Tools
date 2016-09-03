@@ -1,4 +1,4 @@
-package ca.httpstmarysorthodoxchurch.tools;
+package ca.httpstmarysorthodoxchurch.tools.Fragment;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import ca.httpstmarysorthodoxchurch.tools.R;
 import ca.httpstmarysorthodoxchurch.tools.databinding.AddScheduleFragmentBinding;
 
 

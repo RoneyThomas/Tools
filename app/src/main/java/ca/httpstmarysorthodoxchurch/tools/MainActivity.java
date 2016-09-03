@@ -3,11 +3,10 @@ package ca.httpstmarysorthodoxchurch.tools;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
 
-import com.google.firebase.database.*;
+import ca.httpstmarysorthodoxchurch.tools.Fragment.ToolsPagerFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
